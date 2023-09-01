@@ -1,4 +1,4 @@
-# Lab 1
+# Lab 1 - Getting Started
 
 ## Lab Overview - What's in the lab?
 

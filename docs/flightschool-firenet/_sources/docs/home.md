@@ -1,4 +1,4 @@
-![Lab Overview](images/flightschool.png)
+![Lab Overview](../../_logos/flightschool.png)
 
 # Welcome to Aviatrix FlightSchool!  
 

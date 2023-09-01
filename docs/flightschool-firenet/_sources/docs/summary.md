@@ -12,7 +12,7 @@ This training will cover the remaining topics required to get the ACE Associate 
 
 The ACE Program is the industry’s first and only multicloud networking certification. Its comprehensive trainings and specialized courses provide a deep understanding of how to build, operate, automate, scale, and secure cloud networks across AWS, Azure, GCP, and OCI. The ACE Program equips participants with best practices that span all major cloud providers, regardless of whether they use Aviatrix secure cloud networking.
 
-![ACE](images/ace_associate.png)
-![ACE](images/ace_automation.png)
-![ACE](images/ace_operations.png)
-![ACE](images/ace_professional.png)
+![ACE](../../_logos/ace_associate.png)
+![ACE](../../_logos/ace_automation.png)
+![ACE](../../_logos/ace_operations.png)
+![ACE](../../_logos/ace_professional.png)
