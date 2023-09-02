@@ -10,4 +10,4 @@ During these hands-on labs, you will:
 
 **When registering for a pod, be sure to spell your name exactly as you would like it to appear on your ACE Associate certificate!**
 
-![ACE](../../_logos/ace_associate.png)
+![ACE](../../docs/_logos/ace_associate_banner.png)

@@ -13,4 +13,4 @@ _Fig. Lab Complete_
 
 And the best part is that we did not have to touch a single Route Table entry! The secret to this simplicity is to have a central and abstracted Control and Management Plane with a robust Transit Layer, which enables you to easily build everything else on top of that.
 
-![ACE](../../_logos/ace_associate.png)
+![ACE](../../docs/_logos/ace_associate_banner.png)

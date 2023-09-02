@@ -1,7 +1,7 @@
 title : Aviatrix Flightschool
 author: Aviatrix Flightschool
 copyright: '2023'
-logo: '../_logos/aviatrix-logo.png'
+logo: '../docs/_logos/aviatrix-logo.png'
 
 # Short description about the book
 description: >-
@@ -13,4 +13,4 @@ execute:
 # HTML-specific settings
 html:
   home_page_in_navbar         : true
-  favicon                     : '../_logos/aviatrix-favicon-32.png'
+  favicon                     : '../docs/_logos/aviatrix-favicon-32.png'
