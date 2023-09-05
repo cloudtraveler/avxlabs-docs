@@ -2,7 +2,7 @@
 
 Congratulations, you have completed Aviatrix FlightSchool!  Throughout the labs, we built connectivity in a single cloud, across multiple clouds, and did not have to touch a single Cloud Provider route table entry.  
 
-We also added route domains and connection policies to segment our network, added Internet Egress security and have visibility into all traffic going over the AWS, Azure and GCP cloud networks.
+We also added route domains and connection policies to segment our network, added Internet Egress security and have visibility into all traffic going over the AWS, Azure and GCP cloud networks.  
 
 If you have not done so already, please visit the following link to register for an upcoming [ACE Associate Flight School Bridge Training](https://aviatrix.com/ace-flightschool/).
 
