@@ -1,6 +1,8 @@
 # avxlabs-docs
 
-Repository for lab guides for avxlabs-hosted classes including ACE, Flightschool, and Build workshops. These guides are written in [markdown](https://www.markdownguide.org/) and formatted in [jupyter{book}](https://jupyterbook.org/en/stable/intro.html)
+Repository for lab guides for avxlabs-hosted classes including ACE, Flightschool, and Build workshops. These guides are written in [markdown](https://www.markdownguide.org/) and formatted in [jupyter{book}](https://jupyterbook.org/en/stable/intro.html). `Jupyter{book}` runs with a modified version of markdown called [MyST](https://jupyterbook.org/en/stable/content/myst.html) - markdown with added features.
+
+[MyST Cheatsheet](https://jupyterbook.org/en/stable/reference/cheatsheet.html)
 
 ## Prerequisites
 
@@ -9,8 +11,8 @@ Repository for lab guides for avxlabs-hosted classes including ACE, Flightschool
 
 ## Folder structure
 
-- **_logos** - shared images across all lab guides.
 - **docs** - published guide contents in subfolders (subfolder is the navigation uri for each guide).
+- **docs/_logos** - shared images across all lab guides.
 - The rest of the folders contain the raw markdown content for each guide
 
 ## Url
