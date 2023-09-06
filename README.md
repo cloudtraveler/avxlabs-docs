@@ -14,10 +14,11 @@ Repository for lab guides for avxlabs-hosted classes including ACE, Flightschool
 - **docs** - published guide contents in subfolders (subfolder is the navigation uri for each guide).
 - **docs/_logos** - shared images across all lab guides.
 - The rest of the folders contain the raw markdown content for each guide
+- **images** - images for the readme
 
 ## Url
 
-Guides are hosted at: https://docs.aviatrixlab.com/[guide_name]
+Guides are hosted at: https://docs.aviatrixlab.com/[guide-name]
 
 ## Building a new lab guide
 
@@ -59,6 +60,68 @@ Or paste this line directly into your browser bar:
 7. If satisfied with the content, copy the contents of `your_folder/_build/html/` to the root `docs` folder (not the one inside your folder) in a new folder called `your-folder`. Example: if your working directory is `./ace_associate`, your publish directory would be `./docs/ace-associate`.
 
 8. Create a [PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to have the new guide published.
+
+## Useful code examples
+
+### Link to a file for download
+
+Add this code to your markdown file, adjusting the text as needed. The icon and highlighted text are clickable:
+
+```markdown
+Click this link to {Download}`the sample pdf<files/sample.pdf>`.
+```
+
+#### Example
+
+![File Download](images/file_download_link.png)
+
+### Code block with syntax highlighting (and copy button)
+
+Add this to the top of your md file:
+
+```markdown
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Terraform
+  language: terraform
+  name: terraform
+---
+```
+
+Then, create your code-cell block:
+
+```terraform
+
+```{code-cell} terraform
+resource "aviatrix_vpc" "aws_vpc" {
+    cloud_type           = 1
+    account_name         = "aws-account"
+    region               = "eu-central-1"
+    name                 = "aws-transit"
+    cidr                 = "10.50.40.0/23"
+    aviatrix_firenet_vpc = true
+  }
+
+  resource "aviatrix_transit_gateway" "aws_transit_gateway" {
+    cloud_type        = 1
+    account_name      = "aws-account"
+    gw_name           = "aws-transit"
+    vpc_id            = aviatrix_vpc.aws_vpc.vpc_id
+    vpc_reg           = "eu-central-1"
+    gw_size           = "t2.micro"
+    subnet            = aviatrix_vpc.aws_vpc.public_subnets[0].cidr
+    connected_transit = true
+  }
+```
+
+#### Example
+
+![Syntax Highlighting](images/syntax_highlighting.png)
 
 ## Cleanup
 
