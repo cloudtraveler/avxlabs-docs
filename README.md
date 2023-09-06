@@ -13,8 +13,8 @@ Repository for lab guides for avxlabs-hosted classes including ACE, Flightschool
 
 - **docs** - published guide contents in subfolders (subfolder is the navigation uri for each guide).
 - **docs/_logos** - shared images across all lab guides.
-- The rest of the folders contain the raw markdown content for each guide
 - **images** - images for the readme
+- The rest of the folders contain the raw markdown content for each guide
 
 ## Url
 
@@ -77,7 +77,7 @@ Click this link to {Download}`the sample pdf<files/sample.pdf>`.
 
 ### Code block with syntax highlighting (and copy button)
 
-Add this to the top of your md file:
+Add this to the top of your md file, adjusting the language as necessary:
 
 ```markdown
 ---
