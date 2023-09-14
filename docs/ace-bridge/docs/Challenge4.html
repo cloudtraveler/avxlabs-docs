@@ -152,7 +152,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="home.html">
-                    Welcome to ACE DE Lab
+                    Welcome to ACE Operations “Let’s Troubleshoot Together” Session
                 </a>
             </li>
         </ul>
@@ -327,10 +327,10 @@ document.write(`
 <h2>Scenario<a class="headerlink" href="#scenario" title="Permalink to this heading">#</a></h2>
 <p>After resolving the challenge#3, the Database VM administrator mentioned that the Database is receiving requests from an IP range in the <strong>11.64.0.0/24</strong> space.</p>
 <ul class="simple">
-<li><p>Check where this range is coming from</p></li>
-<li><p>Why isn’t the response being received on the Databse Spoke gateway?</p></li>
+<li><p>Launch ping from the Web Spoke GW towards the Database VM.</p></li>
+<li><p>Simultaneously, launch packet capture on the Database Spoke GW</p></li>
 </ul>
-<p><strong>HINT</strong>: Use packet capture on a specific egress interface of the Database Spoke GW.</p>
+<p><strong>HINT</strong>: Use packet capture on a specific egress (both Tunnel interface and LAN interface) interface of the Database Spoke GW.</p>
 </section>
 </section>
 
