@@ -1,6 +1,6 @@
-# Welcome to ACE DE Lab
+# Welcome to ACE Operations "Let's Troubleshoot Together" Session
 
-The objective of this pre-built scenario is to put in practice some of the troubleshooting techniques and tools you have learned and benefit from the real power of the Aviatrix platform.
+The objective behind this section is to collaborate together on a pre-built scenario to put in practice some of the troubleshooting techniques and tools you have learned and benefit from the real power of the Aviatrix platform.
 
 ## 1 - Initial Scenario
 The lab topology can be found below:
@@ -26,9 +26,11 @@ A few notes on the scenario are here:
 ### 1.2. - Requirements
 
 * Time to complete is **90** minutes.
+* One volunteer of the team should share the screen and navigate through the Controller and CoPilot.
 * Use solely the CoPilot and the Controller. 
-* The Wordpress application that is very critical to your business is <ins>broken</ins>! You are going to identify all the issues that are causing it to break.
-* Once the 90 minutes are done, an ACE instructor will walk you through the resolution.
+* The Wordpress application that is very critical to your business is <ins>broken</ins>! You are going to collaborate together to identify all the issues that are causing it to break.
+* Once the 90 minutes are done, the instructor will close the breakout rooms and each team will discuss their findings & learnings for ~ 10 minutes.
+* Once this is done, the instructor will highlight some of the key values that the Aviatrix Platform brings into troubleshooting and operating the setup.
 
 ### 1.3. - Wordpress is OK
 
