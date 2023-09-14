@@ -153,7 +153,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="home.html">
-                    Welcome to ACE DE Lab
+                    Welcome to ACE Operations “Let’s Troubleshoot Together” Session
                 </a>
             </li>
         </ul>
@@ -329,13 +329,14 @@ document.write(`
 <p>Let’s start the investigation to bring up back our application. The communication between the ALB inside the Ingress VPC and the Proxy VM is broken.</p>
 <p><img alt="Lab Overview" src="../_images/Ingress-to-Proxy.png" />
 <em>Figure 5: Ingress to Proxy Failure</em></p>
-<p>Perform once again an HTTP request towards the Wordpress URL.</p>
-<p><img alt="Lab Overview" src="../_images/gateway-timeout.png" />
-<em>Figure 6: Ingress to Proxy Failure</em></p>
 <ul class="simple">
 <li><p>Search for the Private IP address of the Proxy VM</p></li>
 </ul>
 <p><strong>HINT</strong>: Go to <strong>CoPilot &gt; Cloud Fabric &gt; Topology</strong> and find the Proxy VM and retrieve its IP from the <strong>Properties</strong> section.</p>
+<ul class="simple">
+<li><p>Try to ping the Proxy VM from the Ingress Spoke GW</p></li>
+</ul>
+<p><strong>HINT</strong>: Launch the Diagnostics Tools</p>
 <p>By the end of this challenge you need to ensure that the flow goes beyond the Ingress spoke to the Transit and to the Proxy Spoke.</p>
 </section>
 </section>
