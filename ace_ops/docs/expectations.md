@@ -1,10 +1,9 @@
 # Expectations + How to get certified
 
-
 ## 1. Pre-requisites of Training
 
 - **ACE Associate certification**.
-- *Recommended* ACE Professional certification.
+- Recommended ACE Professional certification.
 
 ## 2. Focus
 

@@ -1,12 +1,11 @@
-title : ACE Bridge - Let's Troubleshoot Together
+title : ACE Operations Lab
 author: Aviatrix ACE
 copyright: '2023'
 logo: '../docs/_logos/aviatrix-logo.png'
 
 # Short description about the book
 description: >-
-  Aviatrix ACE Bridge - Let's Troubleshoot Together Lab Guide
-
+  Aviatrix ACE Operations Lab Guides
 execute:
   execute_notebooks           : off
 
