@@ -338,7 +338,7 @@ document.write(`
 <p>ACE’s OnPrem Data Center has recently hired a new network engineer.</p>
 <p>You have been engaged for activating the <strong>Route Approval</strong> feature in order to protect the MCNA from unauthorized advertisements.</p>
 <p><img alt="Lab Overview" src="../_images/lab6-topology.png" />
-<em>Figure 66: Lab 5 Scenario#1 Topology</em></p>
+<em>Figure 70: Lab 5 Scenario#1 Topology</em></p>
 </section>
 <section id="change-request">
 <h2>2. CHANGE REQUEST<a class="headerlink" href="#change-request" title="Permalink to this heading">#</a></h2>
@@ -350,14 +350,14 @@ document.write(`
 <p>Go to <strong>Controller &gt; MULTI-CLOUD TRANSIT &gt; Approval</strong> and turn the knob <strong>“Learned CIDRs Approval”</strong> for the <strong>ace-aws-eu-west-1-transit1 GW</strong>.</p>
 </div>
 <p><img alt="Lab Overview" src="../_images/lab6-approval.png" />
-<em>Figure 67: BGP Route Approval Activation</em></p>
+<em>Figure 71: BGP Route Approval Activation</em></p>
 <p>Afterwards, inform the trainer that you have activated the feature with the tool <strong>“Raise Hand”</strong> on Zoom, as depicted below.</p>
 <p><img alt="Lab Overview" src="../_images/lab6-raise.png" />
-<em>Figure 68: Raise Hand tool on Zoom</em></p>
+<em>Figure 72: Raise Hand tool on Zoom</em></p>
 <p><ins>Please wait for the trainer to inform you about the injection of the failure!</ins></p>
 <p><ins>Wait for one minute and then click on the r<strong>efresh</strong> button to see what kind of route will be blocked inside the <strong>Pending Learned CIDRs</strong> state, as depicted below.</ins></p>
 <p><img alt="Lab Overview" src="../_images/lab6-refresh.png" />
-<em>Figure 69: Refresh</em></p>
+<em>Figure 73: Refresh</em></p>
 <p>You have successfully prevented that somebody from the DC could jeopardize the whole network inside the multicloud infrastructure! Of course do not approve a default route!</p>
 </section>
 <section id="scenario-2">
@@ -365,7 +365,7 @@ document.write(`
 <p>ACE’s OnPrem Partner needs to be connected to the MCNA in the GCP region, however, it has overlapping IP’s with BU1’s Analytics VPC.</p>
 <p>You have been engaged for creating a Site2Cloud connection between the GCP Spoke GW and the OnPrem Partner router and also for resolving the IP conflict through the <strong>Mapped NAT</strong> feature.</p>
 <p><img alt="Lab Overview" src="../_images/lab6-topology2.png" />
-<em>Figure 70: Lab 6 Scenario#2 Topology</em></p>
+<em>Figure 74: Lab 6 Scenario#2 Topology</em></p>
 </section>
 <section id="id1">
 <h2>4. CHANGE REQUEST<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
@@ -377,7 +377,7 @@ document.write(`
 <p>Go to <strong>Controller &gt; SITE2CLOUD &gt; Setup</strong>, then click on <strong>+ADD NEW.</strong></p>
 </div>
 <p><img alt="Lab Overview" src="../_images/lab6-addnew.png" />
-<em>Figure 71: Add New S2C</em></p>
+<em>Figure 75: Add New S2C</em></p>
 <p>Configure the new S2C connection based on the schema below.</p>
 <ul class="simple">
 <li><p><strong>VPC</strong>: ace-gcp-us-east1-spoke1.</p></li>
@@ -393,7 +393,7 @@ document.write(`
 <p><ins>Replace the <strong>#</strong> symbol with your POD number!</ins></p>
 <p>The example is referring to POD #32 (please issue the command based on your POD number!).</p>
 <p><img alt="Lab Overview" src="../_images/lab6-podnumber.png" />
-<em>Figure 72: Retrieving the Public IP</em></p>
+<em>Figure 76: Retrieving the Public IP</em></p>
 <ul class="simple">
 <li><p><strong>Pre-shared Key</strong>: Aviatrix123#</p></li>
 <li><p><strong>Local Tunnel IP</strong>: 169.254.0.1/30</p></li>
@@ -408,10 +408,10 @@ document.write(`
 </li>
 </ul>
 <p><img alt="Lab Overview" src="../_images/lab6-creation.png" />
-<em>Figure 73: Retrieving the Public IP</em></p>
+<em>Figure 77: Retrieving the Public IP</em></p>
 <p>Wait some minutes for the completion of the S2C. Click on the <strong>refresh</strong> button to see the status changing from red to green.</p>
 <p><img alt="Lab Overview" src="../_images/lab6-refresh.png" />
-<em>Figure 74: S2C is up and running</em></p>
+<em>Figure 78: S2C is up and running</em></p>
 <ul class="simple">
 <li><p>SSH to the OnPrem partner router and issue the following command:</p></li>
 </ul>
@@ -419,7 +419,7 @@ document.write(`
 </pre></div>
 </div>
 <p><img alt="Lab Overview" src="../_images/lab6-pingok2.png" />
-<em>Figure 75: Ping is ok</em></p>
+<em>Figure 79: Ping is ok</em></p>
 </section>
 </section>
 

@@ -16,18 +16,18 @@ _Figure 2: Segmentation_
   * Ensure that both **Fetch GW Routes** and **Fetch VPC Routes** intervals are set to <ins>“1 second”</ins> each and then click on **SAVE**.
 
 ![Lab Overview](images/lab1-task.png)
-_Figure 2: Task Server_
+_Figure 3: Task Server_
 
 ![Lab Overview](images/lab1-fetchgwroutes.png)
-_Figure 3: GW Routes_
+_Figure 4: Fetch GW Routes_
 
 ![Lab Overview](images/lab1-fetchvpcroutes.png)
-_Figure 4: VPC Routes_
+_Figure 5: Fetch VPC Routes_
 
 
 Afterwards, click on **Commit**.
 ![Lab Overview](images/lab1-commit.png)
-_Figure 5: Commit_
+_Figure 6: Commit_
 
 ```{warning}
 These are very aggressive settings. In a Production environment, you should NOT set these intervals that frequently!
@@ -42,18 +42,18 @@ There are **two** methods for SSH to any instances inside the multicloud infrast
 1. Using an **SSH client** from your laptop (<ins>recommended method!</ins>).
 
 ![Lab Overview](images/lab1-publicip.png)
-_Figure 6: Public IP_
+_Figure 7: Public IP_
 
 ![Lab Overview](images/lab1-publicname.png)
-_Figure 7: DNS name_
+_Figure 8: DNS name_
 
 2. Using the **Apache Jumpbox** from the POD Portal, <ins>for example if you are within your corporate network and an inbound restriction is applied on port **22**</ins>.
 
 ![Lab Overview](images/lab1-jumpbox.png)
-_Figure 8: Jumpbox_
+_Figure 9: Jumpbox_
 
 ![Lab Overview](images/lab1-guacamoleaccess.png)
-_Figure 9: Apache Guacamole Portal_
+_Figure 10: Apache Guacamole Portal_
 
 ```{note}
 Please bear in mind that if you decide to use the Jumpbox, *Copy and Paste* does not work directly from the host machine, therefore activate the **Guacamole Menu**, that is a sidebar which is hidden until explicitly shown. On a desktop or other device which has a hardware keyboard, you can show this menu by pressing **Ctrl+Alt+Shift** on Windows machine (**Control+Shift+Command** on Mac).
@@ -61,31 +61,30 @@ Please bear in mind that if you decide to use the Jumpbox, *Copy and Paste* does
 
 
 ![Lab Overview](images/lab1-guacamoleterminal.png)
-_Figure 10: Guacamole Menu_
+_Figure 11: Guacamole Menu_
 
 ```{tip}
 The IP addresses can be easily retrieved either from the **Properties** section of each Virtual Machine on the Topology, or alternatively, you can retrieve the **DNS symbolic name** from your personal POD portal.
 ```
 
-
 ![Lab Overview](images/lab1-ec2.png)
-_Figure 11: Instance Properties_
+_Figure 12: Instance Properties_
 
 ![Lab Overview](images/lab1-podred.png)
-_Figure 12: Public DNS Name_
+_Figure 13: Public DNS Name_
 
 Ping and SSH will be successful **within** the same network domain!
 
 ![Lab Overview](images/lab1-pingok.png)
-_Figure 13: BU1 connectivity_
+_Figure 14: BU1 connectivity_
 
-* Verify the network segregation **between** the two BUs: 
+* Verify the network segregation **between** the two BUs:
   * From BU1 Frontend try to ping BU2 Mobile App.
 
 Ping and SSH commands should not work this time, due to the separation between the two segments (i.e. <ins>these are two different Routing Domains</ins>).
 
 ![Lab Overview](images/lab1-pingfails.png)
-_Figure 14: BU1 to BU2 fails_
+_Figure 15: BU1 to BU2 fails_
 
 * Check Network Segmentation on the CoPilot by searching segmentation and look at the **Logical View**.
 
@@ -94,7 +93,7 @@ Go to **CoPilot > Networking > Network Segmentation > Overview**
 ```
 
 ![Lab Overview](images/lab1-logicalview.png)
-_Figure 15: Logical View_
+_Figure 16: Logical View_
 
 * Check the different routing tables (VRFs) maintained by any of the Transit Gateways.
 
@@ -103,7 +102,7 @@ Go to **CoPilot > Cloud Fabric > Gateways > Transit Gateways >** select the **ac
 ```
 
 ![Lab Overview](images/lab1-bu1vrf.png)
-_Figure 16: Network Domain (aka VRF)_
+_Figure 17: Network Domain (aka VRF)_
 
 * Use **FlowIQ** for inspecting the NetFlow Data.
 
@@ -114,7 +113,7 @@ Go to **CoPilot > Monitor > FlowIQ** and filter based, for instance, on the dest
 Then check the Flow Exporters widget, then from the drop-down menu and select the *Aviatrix Gateway* widget: you will see the list of the Aviatrix gateways involved along the path.
 
 ![Lab Overview](images/lab1-flowiq.png)
-_Figure 17: FlowIQ_
+_Figure 18: FlowIQ_
 
 ```{note}
 On the Aviatrix Gateway widget, the very first gateway from the list is the gateway with the highest traffic (in Bytes).
@@ -131,7 +130,7 @@ The Originator has the egress interface that is equal to **eth0** (i.e. the LAN 
 ```
 
 ![Lab Overview](images/lab1-cloudroutes.png)
-_Figure 18: Cloud Routes_
+_Figure 19: Cloud Routes_
 
 * Use **Cloud Routes** for pinpointing the originator of the route **10.0.0.0/24**.
 
@@ -142,4 +141,4 @@ Go to **CoPilot > Diagnostics > Cloud Routes** and filter based on the subnet. <
 This time you need to proceed with a <ins>recursive lookup</ins>: from any Spoke GWs check the **NEXT HOP GATEWAY** column and try to find the originator of 10.0.0.0/24.
 
 ![Lab Overview](images/lab1-cloudroutes.png)
-_Figure 19: Cloud Routes - recursive lookup_
+_Figure 20: Cloud Routes - recursive lookup_

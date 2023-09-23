@@ -7,7 +7,7 @@ ACE’s OnPrem Data Center has recently hired a new network engineer.
 You have been engaged for activating the **Route Approval** feature in order to protect the MCNA from unauthorized advertisements.
 
 ![Lab Overview](images/lab6-topology.png)
-_Figure 66: Lab 5 Scenario#1 Topology_
+_Figure 70: Lab 5 Scenario#1 Topology_
 
 
 ## 2. CHANGE REQUEST
@@ -19,19 +19,19 @@ Go to **Controller > MULTI-CLOUD TRANSIT > Approval** and turn the knob **“Lea
 ```
 
 ![Lab Overview](images/lab6-approval.png)
-_Figure 67: BGP Route Approval Activation_
+_Figure 71: BGP Route Approval Activation_
 
 Afterwards, inform the trainer that you have activated the feature with the tool **“Raise Hand”** on Zoom, as depicted below.
 
 ![Lab Overview](images/lab6-raise.png)
-_Figure 68: Raise Hand tool on Zoom_
+_Figure 72: Raise Hand tool on Zoom_
 
 <ins>Please wait for the trainer to inform you about the injection of the failure!</ins>
 
 <ins>Wait for one minute and then click on the r**efresh** button to see what kind of route will be blocked inside the **Pending Learned CIDRs** state, as depicted below.</ins>
 
 ![Lab Overview](images/lab6-refresh.png)
-_Figure 69: Refresh_
+_Figure 73: Refresh_
 
 You have successfully prevented that somebody from the DC could jeopardize the whole network inside the multicloud infrastructure! Of course do not approve a default route!
 
@@ -42,7 +42,7 @@ ACE’s OnPrem Partner needs to be connected to the MCNA in the GCP region, howe
 You have been engaged for creating a Site2Cloud connection between the GCP Spoke GW and the OnPrem Partner router and also for resolving the IP conflict through the **Mapped NAT** feature.
 
 ![Lab Overview](images/lab6-topology2.png)
-_Figure 70: Lab 6 Scenario#2 Topology_
+_Figure 74: Lab 6 Scenario#2 Topology_
 
 ## 4. CHANGE REQUEST
 
@@ -54,7 +54,7 @@ Go to **Controller > SITE2CLOUD > Setup**, then click on **+ADD NEW.**
 
 
 ![Lab Overview](images/lab6-addnew.png)
-_Figure 71: Add New S2C_
+_Figure 75: Add New S2C_
 
 Configure the new S2C connection based on the schema below.
 
@@ -78,7 +78,7 @@ Use the “**dig partner-csr-public.pod#.aviatrixlab.com +short**” command <in
 The example is referring to POD #32 (please issue the command based on your POD number!).
 
 ![Lab Overview](images/lab6-podnumber.png)
-_Figure 72: Retrieving the Public IP_
+_Figure 76: Retrieving the Public IP_
 
 - **Pre-shared Key**: Aviatrix123#
 
@@ -93,12 +93,12 @@ _Figure 72: Retrieving the Public IP_
   - **Local Subnet (Virtual)** = 192.168.1.0/24
 
 ![Lab Overview](images/lab6-creation.png)
-_Figure 73: Retrieving the Public IP_
+_Figure 77: Retrieving the Public IP_
 
 Wait some minutes for the completion of the S2C. Click on the **refresh** button to see the status changing from red to green.
 
 ![Lab Overview](images/lab6-refresh.png)
-_Figure 74: S2C is up and running_
+_Figure 78: S2C is up and running_
 
 - SSH to the OnPrem partner router and issue the following command:
 
@@ -107,4 +107,4 @@ ping 192.168.1.100 source gigabitethernet1
 ```
 
 ![Lab Overview](images/lab6-pingok2.png)
-_Figure 75: Ping is ok_
+_Figure 79: Ping is ok_

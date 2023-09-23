@@ -7,7 +7,7 @@ BU1 and BU2 were able to communicate as end of Lab3.
 Unfortunately, the network team received another complaint from BU1 Frontend Team that BU2 Mobile App was no longer reachable.
 
 ![Lab Overview](images/lab4-topology.png)
-_Figure 42: Network Domains with the Connection Policy_
+_Figure 45: Network Domains with the Connection Policy_
 
 
 ## 2. TROUBLESHOOT REQUEST
@@ -19,7 +19,7 @@ _Figure 42: Network Domains with the Connection Policy_
   - SSH to BU1 Frontend and launch ping/ssh to BU2 Mobile App.
 
 ![Lab Overview](images/lab4-pingunsucc.png)
-_Figure 43: Ping fails_
+_Figure 46: Ping fails_
 
 - Check whether the concerned Spokes have the relevant routes or not.
 
@@ -28,7 +28,7 @@ Go to **CoPilot > Cloud Fabric > Gateways > Spoke Gateways >** select the **ace-
 ```
 
 ![Lab Overview](images/lab4-filter.png)
-_Figure 44: Filter out_
+_Figure 47: Filter out_
 
 From the outcome above, it is evident that Spoke1 in AWS has the destination route in his RTB.
 
@@ -39,15 +39,15 @@ Go to **CoPilot > Cloud Fabric > Topology** and select the concerned Spoke Gatew
 ```
 
 ![Lab Overview](images/lab4-diag.png)
-_Figure 45: Enterprise-Grade Tools_
+_Figure 48: Enterprise-Grade Tools_
 
 ![Lab Overview](images/lab4-pingfails.png)
-_Figure 46: Ping fails_
+_Figure 49: Ping fails_
 
 - Try to ping both workloads from the Transit.
 
 ![Lab Overview](images/lab4-pingok.png)
-_Figure 47: Ping ok_
+_Figure 50: Ping ok_
 
 - Check if the concerned Spoke VPCs are inspected by FireNet.
 
@@ -56,12 +56,12 @@ Go to **Controller > FIREWALL NETWORK > Policy**
 ```
 
 ![Lab Overview](images/lab4-inspection.png)
-_Figure 48: Inspection Policy Verification_
+_Figure 51: Inspection Policy Verification_
 
 - Have a look at the dashboard on the main page of the Controller.
 
 ![Lab Overview](images/lab4-dashboard.png)
-_Figure 49: Dashboard_
+_Figure 52: Dashboard_
 
 - Verify the Vendor Integration on the FireNet section on the Controller!
 
@@ -70,19 +70,19 @@ Go to **Controller > FIREWALL NETWORK > Vendor Integration**, select the **FW**,
 ```
 
 ![Lab Overview](images/lab4-edit.png)
-_Figure 50: Vendor Integration_
+_Figure 53: Vendor Integration_
 
 ![Lab Overview](images/lab4-missing.png)
-_Figure 51: Missing route_
+_Figure 54: Missing route_
 
 You will notice that the **10.0.0.0/8** is not present inside the routing table of the FW.
 
 - Fix the problem, clicking on the **SYNC** button, in order to inject again the 10.0.0.0/8 into the RTB.
 
 ![Lab Overview](images/lab4-sync.png)
-_Figure 52: SYNC_
+_Figure 55: SYNC_
 
 - Relaunch the ping from **BU1 Frontend** towards **BU2 Mobile App**.
 
 ![Lab Overview](images/lab4-pingworks.png)
-_Figure 53: Ping is ok_
+_Figure 56: Ping is ok_

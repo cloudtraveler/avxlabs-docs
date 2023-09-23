@@ -19,7 +19,7 @@ You have been engaged to create the following **two** additional rules:
 <ins>Please bear in mind that BU1 is not allowed to SSH to any instances in BU2.</ins>
 
 ![Lab Overview](images/lab8-topology.png)
-_Figure 81: Lab 8 Scenario Topology_
+_Figure 85: Lab 8 Scenario Topology_
 
 
 ## 2. CHANGE REQUEST
@@ -28,7 +28,7 @@ _Figure 81: Lab 8 Scenario Topology_
   - SSH fails as expected.
 
 ![Lab Overview](images/lab8-topology.png)
-_Figure 82: SSH fails within BU1_
+_Figure 86: SSH fails within BU1_
 
 - Create an intra-rule that allows SSH **within** bu1 and then verify that SSH is permitted among BU1’s instances. Do not forget to enable **“Logging”**.
 
@@ -38,19 +38,19 @@ Please bear in mind that once the rule has been created is not immediately appli
 ```
 
 ![Lab Overview](images/lab8-sshok.png)
-_Figure 83: SSH is ok within BU1_
+_Figure 87: SSH is ok within BU1_
 
 Afterwards try also to check the **Monitor** section in order to explore the logs!
 
 ![Lab Overview](images/lab8-monitor.png)
-_Figure 84: Monitor_
+_Figure 88: Monitor_
 
 - SSH on the **BU2 Mobile App** and try to SSH to **BU1 Frontend**.
   - SSH fails as expected.
   - Refer to your POD portal or check the Topology for the FQDN/IP of BU1 Frontend. Moreover, refer to the private symbolic names or private IPs!
 
 ![Lab Overview](images/lab8-bu2tobu1.png)
-_Figure 85: BU2 to BU1 fails_
+_Figure 89: BU2 to BU1 fails_
 
 - Create an inter-rule that allows SSH **from** BU2 **to** BU1 and then verify that SSH is permitted from Mobile App BU2 towards Frontend BU1. Do not forgert to enable the **“Logging”**.
 
@@ -59,9 +59,9 @@ Go to **CoPilot > Security > Distributed Cloud Firewall** and click on **+Rule**
 ```
 
 ![Lab Overview](images/lab8-bu2tobu1ok.png)
-_Figure 86: BU2 to BU1 is ok_
+_Figure 90: BU2 to BU1 is ok_
 
 - Check again the **Monitor** section to find out the new logs for the inter-rule!
 
 ![Lab Overview](images/lab8-monitor2.png)
-_Figure 87: Monitor_
+_Figure 92: Monitor_

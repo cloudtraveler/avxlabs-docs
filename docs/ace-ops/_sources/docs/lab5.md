@@ -7,7 +7,7 @@ BU1 is suddenly unable to communicate with both BU1 Analytics and BU1 DB.
 The network team discovered a disgruntled employee jeopardized the connectivity between the two workloads.
 
 ![Lab Overview](images/lab5-topology.png)
-_Figure 54: Lab 5 Topology_
+_Figure 57: Lab 5 Topology_
 
 ## 2. TROUBLESHOOT REQUEST
 
@@ -15,7 +15,7 @@ _Figure 54: Lab 5 Topology_
   - SSH to BU1 Frontend and carry out ping/traceroute/ssh commands towards BU1 Analytics.
 
 ![Lab Overview](images/lab5-pingfails.png)
-_Figure 55: Ping fails_
+_Figure 58: Ping fails_
 
 - Check whether the AWS Spoke1 GW and the GCP Spoke1 GW have the relevant routes or not.
 
@@ -24,7 +24,7 @@ Go to **CoPilot > Cloud Fabric > Gateways > Spoke Gateways >** select the **Spok
 ```
 
 ![Lab Overview](images/lab5-filter.png)
-_Figure 56: Filter out_
+_Figure 59: Filter out_
 
 The Spoke1 in AWS does not have the destination route in GCP based on the outcome above...
 
@@ -37,7 +37,7 @@ Go to **CoPilot > Cloud Fabric > Gateways > Transit Gateways >** select the **Tr
 - "**Next Hop Gateway** *contains* **gcp**"
 
 ![Lab Overview](images/lab5-nexthop.png)
-_Figure 57: Next Hop_
+_Figure 60: Next Hop_
 
 You will notice that the Spoke1 in GCP is advertising a bogus/malicious route (i.e. 40.40.40.0/24) and the legit route **172.16.211.0/24** has been withdrawn!
 
@@ -48,18 +48,18 @@ Go to **CoPilot > Cloud Fabric > Gateways > Spoke Gateways >** select the **Spok
 ```
 
 ![Lab Overview](images/lab5-customize.png)
-_Figure 58: Customize Spoke Advertised VPC/VNet CIDRs_
+_Figure 61: Customize Spoke Advertised VPC/VNet CIDRs_
 
 - Relaunch the ping from **BU1 Frontend** towards **BU1 Analytics**.
 
 ![Lab Overview](images/lab5-pingok.png)
-_Figure 59: Ping is ok_
+_Figure 62: Ping is ok_
 
 - Verify that the connectivity between **BU1 Frontend** and **BU1 DB** is actually broken.
   - SSH to BU1 Frontend and carry out ping/traceroute/ssh commands towards BU1 DB.
 
 ![Lab Overview](images/lab5-pingfails2.png)
-_Figure 60: Ping is unsuccessful_
+_Figure 63: Ping is unsuccessful_
 
 - Use **Diagnostics tools** by clicking on the **Spoke1 Gateway in AWS** and try to *traceroute* the instance behind the other spoke.
 
@@ -68,10 +68,10 @@ Go to **CoPilot > Coud Fabric > Topology** then select the **Spoke1 GW in AWS**,
 ```
 
 ![Lab Overview](images/lab5-gatewaydiag.png)
-_Figure 61: Gateway Diagnostics_
+_Figure 64: Gateway Diagnostics_
 
 ![Lab Overview](images/lab5-gatewaydiag2.png)
-_Figure 62: Gateway Diagnostics 2_
+_Figure 65: Gateway Diagnostics 2_
 
 The outcome above shows **5** Hops. <ins>Try to figure out why the first and the third Hop have the same IP...</ins>
 
@@ -82,10 +82,10 @@ The outcome above shows **5** Hops. <ins>Try to figure out why the first and the
 ```
 
 ![Lab Overview](images/lab5-pingtovm.png)
-_Figure 63: Ping to BU1 DB_
+_Figure 66: Ping to BU1 DB_
 
 ![Lab Overview](images/lab5-packetcapture.png)
-_Figure 64: Packet Capture_
+_Figure 67: Packet Capture_
 
 You will only notice ICMP Echo Request packets going out from the LAN interface. Moreover the Source IP is completely different from the expected source IP, that should be part of the cidr 10.1.211.0/24.
 
@@ -96,9 +96,9 @@ Go to **CoPilot > Cloud Fabric > Gateways > Spoke Gateways >** select the **Spok
 ```
 
 ![Lab Overview](images/lab5-deleterule.png)
-_Figure 65: Deletion of the NAT rule_
+_Figure 68: Deletion of the NAT rule_
 
 - Relaunch the ping from **BU1 Frontend** towards **BU1 DB**.
 
 ![Lab Overview](images/lab5-pingok2.png)
-_Figure 66: Ping is ok_
+_Figure 69: Ping is ok_

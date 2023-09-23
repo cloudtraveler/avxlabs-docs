@@ -348,14 +348,14 @@ document.write(`
 </li>
 </ul>
 <p><img alt="Lab Overview" src="../_images/lab1-task.png" />
-<em>Figure 2: Task Server</em></p>
+<em>Figure 3: Task Server</em></p>
 <p><img alt="Lab Overview" src="../_images/lab1-fetchgwroutes.png" />
-<em>Figure 3: GW Routes</em></p>
+<em>Figure 4: Fetch GW Routes</em></p>
 <p><img alt="Lab Overview" src="../_images/lab1-fetchvpcroutes.png" />
-<em>Figure 4: VPC Routes</em></p>
+<em>Figure 5: Fetch VPC Routes</em></p>
 <p>Afterwards, click on <strong>Commit</strong>.
 <img alt="Lab Overview" src="../_images/lab1-commit.png" />
-<em>Figure 5: Commit</em></p>
+<em>Figure 6: Commit</em></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>These are very aggressive settings. In a Production environment, you should NOT set these intervals that frequently!</p>
@@ -373,33 +373,33 @@ document.write(`
 <li><p>Using an <strong>SSH client</strong> from your laptop (<ins>recommended method!</ins>).</p></li>
 </ol>
 <p><img alt="Lab Overview" src="../_images/lab1-publicip.png" />
-<em>Figure 6: Public IP</em></p>
+<em>Figure 7: Public IP</em></p>
 <p><img alt="Lab Overview" src="../_images/lab1-publicname.png" />
-<em>Figure 7: DNS name</em></p>
+<em>Figure 8: DNS name</em></p>
 <ol class="arabic simple" start="2">
 <li><p>Using the <strong>Apache Jumpbox</strong> from the POD Portal, <ins>for example if you are within your corporate network and an inbound restriction is applied on port <strong>22</strong></ins>.</p></li>
 </ol>
 <p><img alt="Lab Overview" src="../_images/lab1-jumpbox.png" />
-<em>Figure 8: Jumpbox</em></p>
+<em>Figure 9: Jumpbox</em></p>
 <p><img alt="Lab Overview" src="../_images/lab1-guacamoleaccess.png" />
-<em>Figure 9: Apache Guacamole Portal</em></p>
+<em>Figure 10: Apache Guacamole Portal</em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Please bear in mind that if you decide to use the Jumpbox, <em>Copy and Paste</em> does not work directly from the host machine, therefore activate the <strong>Guacamole Menu</strong>, that is a sidebar which is hidden until explicitly shown. On a desktop or other device which has a hardware keyboard, you can show this menu by pressing <strong>Ctrl+Alt+Shift</strong> on Windows machine (<strong>Control+Shift+Command</strong> on Mac).</p>
 </div>
 <p><img alt="Lab Overview" src="../_images/lab1-guacamoleterminal.png" />
-<em>Figure 10: Guacamole Menu</em></p>
+<em>Figure 11: Guacamole Menu</em></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>The IP addresses can be easily retrieved either from the <strong>Properties</strong> section of each Virtual Machine on the Topology, or alternatively, you can retrieve the <strong>DNS symbolic name</strong> from your personal POD portal.</p>
 </div>
 <p><img alt="Lab Overview" src="../_images/lab1-ec2.png" />
-<em>Figure 11: Instance Properties</em></p>
+<em>Figure 12: Instance Properties</em></p>
 <p><img alt="Lab Overview" src="../_images/lab1-podred.png" />
-<em>Figure 12: Public DNS Name</em></p>
+<em>Figure 13: Public DNS Name</em></p>
 <p>Ping and SSH will be successful <strong>within</strong> the same network domain!</p>
 <p><img alt="Lab Overview" src="../_images/lab1-pingok.png" />
-<em>Figure 13: BU1 connectivity</em></p>
+<em>Figure 14: BU1 connectivity</em></p>
 <ul class="simple">
 <li><p>Verify the network segregation <strong>between</strong> the two BUs:</p>
 <ul>
@@ -409,7 +409,7 @@ document.write(`
 </ul>
 <p>Ping and SSH commands should not work this time, due to the separation between the two segments (i.e. <ins>these are two different Routing Domains</ins>).</p>
 <p><img alt="Lab Overview" src="../_images/lab1-pingfails.png" />
-<em>Figure 14: BU1 to BU2 fails</em></p>
+<em>Figure 15: BU1 to BU2 fails</em></p>
 <ul class="simple">
 <li><p>Check Network Segmentation on the CoPilot by searching segmentation and look at the <strong>Logical View</strong>.</p></li>
 </ul>
@@ -418,7 +418,7 @@ document.write(`
 <p>Go to <strong>CoPilot &gt; Networking &gt; Network Segmentation &gt; Overview</strong></p>
 </div>
 <p><img alt="Lab Overview" src="../_images/lab1-logicalview.png" />
-<em>Figure 15: Logical View</em></p>
+<em>Figure 16: Logical View</em></p>
 <ul class="simple">
 <li><p>Check the different routing tables (VRFs) maintained by any of the Transit Gateways.</p></li>
 </ul>
@@ -427,7 +427,7 @@ document.write(`
 <p>Go to <strong>CoPilot &gt; Cloud Fabric &gt; Gateways &gt; Transit Gateways &gt;</strong> select the <strong>ace-aws-eu-west-1-transit</strong> gateway <strong>&gt; Gateway Routes</strong> and filter out based on the Network Domain (i.e. either BU1 or BU2).</p>
 </div>
 <p><img alt="Lab Overview" src="../_images/lab1-bu1vrf.png" />
-<em>Figure 16: Network Domain (aka VRF)</em></p>
+<em>Figure 17: Network Domain (aka VRF)</em></p>
 <ul class="simple">
 <li><p>Use <strong>FlowIQ</strong> for inspecting the NetFlow Data.</p></li>
 </ul>
@@ -437,7 +437,7 @@ document.write(`
 </div>
 <p>Then check the Flow Exporters widget, then from the drop-down menu and select the <em>Aviatrix Gateway</em> widget: you will see the list of the Aviatrix gateways involved along the path.</p>
 <p><img alt="Lab Overview" src="../_images/lab1-flowiq.png" />
-<em>Figure 17: FlowIQ</em></p>
+<em>Figure 18: FlowIQ</em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>On the Aviatrix Gateway widget, the very first gateway from the list is the gateway with the highest traffic (in Bytes).</p>
@@ -454,7 +454,7 @@ document.write(`
 <p>The Originator has the egress interface that is equal to <strong>eth0</strong> (i.e. the LAN interface), which in turn means, direct connected.</p>
 </div>
 <p><img alt="Lab Overview" src="../_images/lab1-cloudroutes.png" />
-<em>Figure 18: Cloud Routes</em></p>
+<em>Figure 19: Cloud Routes</em></p>
 <ul class="simple">
 <li><p>Use <strong>Cloud Routes</strong> for pinpointing the originator of the route <strong>10.0.0.0/24</strong>.</p></li>
 </ul>
@@ -464,7 +464,7 @@ document.write(`
 </div>
 <p>This time you need to proceed with a <ins>recursive lookup</ins>: from any Spoke GWs check the <strong>NEXT HOP GATEWAY</strong> column and try to find the originator of 10.0.0.0/24.</p>
 <p><img alt="Lab Overview" src="../_images/lab1-cloudroutes.png" />
-<em>Figure 19: Cloud Routes - recursive lookup</em></p>
+<em>Figure 20: Cloud Routes - recursive lookup</em></p>
 </section>
 </section>
 
