@@ -8,11 +8,11 @@ You have been tasked with building connectivity and security for an application 
 The application components are already deployed in each of the VPCs/VNets, all you have to do is build out the connectivity. The app is only available via private IP address, which you can access using a web-based RDP server, which is available on-prem.
 
 
-![Lab Overview](images/lab-before.png)
+![Lab Overview](images/lab1-topology.png)
 _Figure: Lab Overview_
 
 ## Lab 1.1 - Aviatrix Controller
-The Aviatrix Controller is deployed in a Shared Services VPC in AWS. 
+The **Aviatrix Controller** is deployed in a Shared Services VPC in AWS. 
 ### Description
 Log in to the Aviatrix Controller
 ### Validate
