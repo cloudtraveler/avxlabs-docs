@@ -4,7 +4,7 @@ Use Aviatrix `CoPilot` to answer the following questions:
 
 ---
 
-1. `GeoBlocking` is an Aviatrix feature that can block inbound IP traffic from IP addresses associated with particular geographic regions. What, if any, regions are being blocked?
+1. `GeoBlocking` is an Aviatrix feature that can block IP traffic to/from IP addresses associated with particular geographic regions. What, if any, regions are being blocked?
 
 2. What encryption scheme is being used by the `site-to-cloud` connection with the Azure transit gateway?
 
