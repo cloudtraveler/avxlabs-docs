@@ -23,3 +23,5 @@ Use Aviatrix `CoPilot` to answer the following questions:
 9. Name the `Aviatrix` gateway where `ThreatIQ` has detected malicious inbound attacks.
 
 10. Name 3 domains where egress connectivity is being attempted, but denied.
+
+11. Gateway Learned CIDR Approval is enabled on `transit-aws`. What is the pending learned CIDR?
