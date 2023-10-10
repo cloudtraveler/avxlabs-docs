@@ -1,32 +1,31 @@
 # Lab 3 - NETWORK SEGMENTATION
 
-## 1. OBJECTIVE
+## 1. Objective
 
-Implement network segmentation between workloads across multi-cloud and on-premises environments using network domains.
-
-Green VPC resources in AWS and Azure can communicate with each other, while access is restricted to Blue VPC resources in GCP. Later, we will ease this restriction with a connection policy; Blue and Green segments will be able to communicate with others as well.
+Implement network segmentation between workloads across multicloud and on-premises environments using network domains.
 
 ```{note}
 Network Segmentation will be extended to on-premises in the Site2Cloud lab.
 ```
 
-## 2. NETWORK SEGMENTATION OVERVIEW
+## 2. Network Segmentation Overview
 
-Enterprises can define their network domains (aka segments) and group VNets/VPCs/VCNs with similar security policies without requiring firewall solutions.
+Enterprises can define their network domains (aka *segments*) and group VNets/VPCs/VCNs with similar security policies without requiring firewall solutions.
 
 Aviatrix transit and spokes architecture help (aka *Hub & Spoke* architecture) enterprises create customised segments and onboard branches, partners and customers in their respective segments so no partner can communicate with each other unless desired.
 
-## 3. TOPOLOGY
+## 3. Topology
 
-In this lab, we will use Aviatrix CoPilot to enable Network Segmentation in Azure, AWS and GCP, in order to segregate VPC/VNet with similarities. At this point, there is a flat routing domain and the communication among the three CSPs occurs through the Transit Core Backbone layer.
+In this lab, we will use Aviatrix CoPilot to enable `Network Segmentation` in Azure, AWS and GCP, in order to segregate VPC/VNet with similarities. At this point, there is a flat routing domain and the communication among the three CSPs occurs through the Transit Core Backbone layer.
+
+Green VPC resources in AWS and Azure can communicate with each other, while access is restricted to Blue VPC resources in GCP. Later, we will ease this restriction with a `Connection Policy`: Blue and Green segments will be able to communicate with others as well.
 
 ![lab3-topology](images/lab3-topology.png)
 _Figure 69: Topology for Lab 3_
 
-## 4. CONFIGURATION
+## 4. Configuration
 
- 
-### 4.1. AVIATRIX TRANSIT GATEWAYS
+### 4.1. Aviatrix Transit Gateways
 
 Go to **CoPilot > Networking > Network Segmentation > Network Domains > Transit Gateways**:
 
@@ -38,14 +37,14 @@ Enable all three Aviatrix Transit Gateways in Azure, GCP and AWS (<ins>**us-east
 ![lab3-transit2](images/lab3-enabletransit2.png)
 _Figure 71: Enable Segmentation on the relevant Transit GWs_
 
-## 4.2 NETWORK DOMAINS
+## 4.2 Network Domains
 
 Go to **CoPilot > Networking > Network Segmentation > Network Domains > + Network Domain**
 
 ![lab3-nd](images/lab3-networkdomain.png)
 _Figure 72: Network Domain creation_
 
-Create two network domains (Green and Blue) and associate them to their respective Spokes as follows:
+Create **two** network domains (Green and Blue) and associate them to their respective Spokes as follows:
 
 -  <span style='color:lightgreen'>Green</span>- azure-us-west-spoke1 (do not select azure-us-west-**spoke2**)
 - <span style='color:lightgreen'>Green</span> - aws-us-east2-spoke1 (do not select aws-us-**east1**-spoke1)
@@ -59,14 +58,14 @@ _Figure 73: Green network domain_
 ![lab3-blue](images/lab3-blue.png)
 _Figure 74: Blue network domain_
 
-## 5. VERIFICATION OF SEGMENT ATTACHMENTS
+## 5. Verification of Segment Attachments
 
 This is what the lab topology looks like after enabling network segmentation:
 
 ![lab3-newtopology](images/lab3-topologywithnd.png)
 _Figure 75: Topology with Network Domains_
 
-### 5.1. COPILOT VERIFICATION
+### 5.1. CoPilot Verification
 
 Go to **CoPilot > Networking > Network Segmentation > Network Domains**
 
@@ -95,7 +94,7 @@ Nodes represent spokes and site2cloud instances. Hover over a node to highlight 
 ![lab3-logicalview](images/lab3-logicalview.png)
 _Figure 80: Logical View_
 
-Open **three** terminal windows and SSH to the test instances/VMs in each cloud and ping the private IPs of each other to test the Multicloud connectivity (Refer to pod info).
+Open **three** terminal windows and SSH to the test instances/VMs in each cloud and ping the **private** IPs of each other to test the Multicloud connectivity (Refer to pod info).
 
 Azure and AWS resources will ping each other, but neither will be able to access GCP VM, since GCP spoke is in a different segment (Blue).
 
@@ -120,9 +119,9 @@ SSH into **_gcp-us-central1-spoke1-test1_** (ssh student@public_ip)
 ![lab3-ping3](images/lab3-ping3.png)
 _Figure 82: Ping test from GCP_
 
-## 6. CONNECTION POLICY
+## 6. Connection Policy
 
-Go to CoPilot > Networking > Network Segmentation > Network Domains
+Go to **CoPilot > Networking > Network Segmentation > Network Domains**
 
 Click the pencil icon to edit. You can either select the Green domain or the Blue domain.
 
@@ -133,12 +132,12 @@ The connection policy is always bidirectional!
 ![lab3-edit](images/lab3-editnd.png)
 _Figure 83: Edit Blue_
 
-Select the appropriate option from the **Connect to Network Domain** pull-down menu (Green shown here). Then click **Save**:
+Select the appropriate option from the **`"Connect to Network Domain"`** pull-down menu (Green shown here). Then click **Save**:
 
 ![lab3-apply](images/lab3-applycp.png)
 _Figure 84: Apply the connection policy_
 
-### 6.1. VERIFICATION OF THE CONNECTION POLICY
+### 6.1. Verification of Connection Policy
 
 Go to **CoPilot > Networking > Network Segmentation > Overview > Logical View**
 
@@ -147,7 +146,7 @@ Now you will see that the spoke gateways in all three clouds are connected. This
 ![lab3-cpnew](images/lab3-cpnew.png)
 _Figure 85: Logical View with the connection policy_
 
-Retest the connectivity; now you will have end-to-end connectivity across a multicloud environment.
+Retest the connectivity; now you will have end-to-end connectivity across the multicloud environment.
 
 **AWS**:
 

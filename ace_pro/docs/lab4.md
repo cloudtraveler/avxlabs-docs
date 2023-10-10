@@ -1,8 +1,8 @@
 # Lab 4 - RBAC
 
-## 1. OBJECTIVE
+## 1. Objective
 
-Implement Role-Based Access Control using Local Authentication both on the **Controller** and on the **CoPilot**.
+Implement **Role-Based Access Control** using Local Authentication both on the **Controller** and on the **CoPilot**.
 
 You will perform tasks to address the following scenario:
 
@@ -13,9 +13,9 @@ You will perform tasks to address the following scenario:
 Notice that the account you are provided in the labs is a local user called **student** that is a member of the Permission Group <ins>"admin"</ins>.
 ```
 
-## 2. CONFIGURATION: RBAC FOR THE CONTROLLER
+## 2. Configuration: RBAC for the Controller
 
-### 2.1. CREATE A PERMISSION GROUP
+### 2.1. Create a Permission Group
 
 Navigate to **CoPilot > Administration > User Access > Permission Group**
 
@@ -33,12 +33,12 @@ Click on **Save**.
 ![lab4-dropdown1](images/lab4-dropdown1.png)
 _Figure 90: Permisionn Group configuration_
 
-In the list of permission groups you should see the new created controller-operators.
+In the list of permission groups you should see the new created **controller-operators**.
 
 ![lab4-dropdown1](images/lab4-controlleroperators.png)
 _Figure 91: "controller-operators" Permission group_
 
-### 2.2. Create a User
+### 2.2. Create a new User
 
 Navigate to **CoPilot > Administration > User Access > Users**
 
@@ -70,9 +70,9 @@ At this point, you should have received an email and a message in the **Notifica
 ![lab4-notification](images/lab4-notification.png)
 _Figure 95: Notification message_
 
-## 3. VERIFICATION: RBAC ON THE CONTROLLER
+## 3. Verification: RBAC on the Controller
  
-### 3.1. LOG OUT AND LOG BACK IN AS NEW RBACK USER (controller-op)
+### 3.1. Log out and log back in as new RBACK User (controller-op)
 
 Go to **Controller** and then hover over the user icon in the top-right corner and click on **Sign out**.
 
@@ -89,7 +89,7 @@ You should see in the top-right corner that you are logged in as the **controlle
 ![rbac](images/lab4-rbac.png)
 _Figure 98: RBAC sign-in_
 
-### 3.1.1. POSITIVE TEST
+### 3.1.1. Positive Test
 
 Navigate to **Controller > USEFUL TOOLS > Create a VPC** and click `"+ Add New"`
 
@@ -112,7 +112,7 @@ You will receive confirmation that your VPC was created successfully!
 ![successfully created](images/lab4-success.png)
 _Figure 100: Successfully created_
 
-### 3.1.2. NEGATIVE TEST
+### 3.1.2. Negative Test
 
 Navigate to **Controller > MULTI-CLOUD TRANSIT > Segmentation** and scroll down to **Step 3, Add / Modify Connection Policy**
 
@@ -129,12 +129,12 @@ You should immediately receive an error in the Notifications tray such as this:
 _Figure 102: Error_
 
 ```{attention}
-Before moving to the subsequent section, be sure to sign out as a controller-op and sign back in as a student.
+Before moving to the subsequent section, be sure to sign out as a **controller-op** and sign back in as a **student**.
 ```
 
-## 4. CONFIGURATION: RBAC FOR THE COPILOT
+## 4. Configuration: RBAC for the CoPilot
  
-### 4.1. CREATE A PERMISSION GROUP
+### 4.1. Create a new Permission Group
 
 Navigate to **CoPilot > Administration > User Acces > Permission Group**
 
@@ -143,7 +143,7 @@ Click on `“+ Permission Group”`.
 ![Permission Group](images/lab4-permission2.png)
 _Figure 103: New Permission Group_
 
-Ensure to insert the following values inside the pop-up window “Create Permission Group”:
+Ensure to insert the following values inside the pop-up window `“Create Permission Group”`:
 
 - **Name**: <span style='color:lightgreen'>copilot-operators</span>
 - **Users**: <span style='color:lightgreen'>[empty]</span>
@@ -166,7 +166,7 @@ You should notice a **Notification** message popping up.
 ![successfully created](images/lab4-message.png)
 _Figure 106: Successfully created_
 
-### 4.2. CREATE A NEW USER
+### 4.2. Create a new User
 
 Navigate to **CoPilot > Administration > User Acces > Users** 
 
@@ -190,9 +190,9 @@ This is the list of all users that you should be able to see at this point.
 ![list](images/lab4-list.png)
 _Figure 108: List of users_
 
-## 5. VERIFICATION: RBAC ON THE COPILOT
+## 5. Verification: RBAC on the CoPilot
  
-### 5.1. LOG OUT AND LOG BACK IN AS NEW RBAC USER
+### 5.1. Log out and log back in as new RBAC User (copilot-op)
 
 Hover over the user icon in the top-right corner and click **Logout**.
 
@@ -205,7 +205,7 @@ Sign back in as a **copilot-op** with the same password you picked earlier.
 _Figure 110: Log in CoPilot_
 
 ```{attention}
-You will immediately notice that the RBAC feature on the CoPilot is capable to limit to each persona the visbility of the platform, showing only those sections that have been permitted.
+You will immediately notice that the RBAC feature on the CoPilot is capable to limit to each persona the visibility of the platform, showing only those sections that have been permitted.
 
 The user copilot-op can only interact with the Cloud Fabric section (but only with the sub-section Topology, whereby, this user is not authorized to deploy gateways), the Monitor section and the Troubleshoot section.
 
