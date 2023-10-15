@@ -11,7 +11,7 @@ Unless otherwise mentioned, the lab PODs will be available until Friday afternoo
 ## 2. Prerequisites
 
 - You must have an `SSH client` installed on your PC and be comfortable using it.
-- If you cannot SSH from your corporate laptop/desktop, <ins>please use a personal laptop/desktop that does not have security outboud restrictions (e.g. port 22 permitted)</ins>.
+- If you cannot SSH from your corporate laptop/desktop, <ins>please use a personal laptop/desktop that does not have security outboud restrictions (e.g. port 22 should be permitted)</ins>.
 - You may be asked to share your desktop on the Zoom call, so please be prepared.
 
 ## 3. Getting Started with the labs
@@ -32,7 +32,7 @@ This information is provided separately before the start of the labs inside a de
 - Test Instances in each cloud
 - Bootstrap package information for Palo Alto Firewall (VM-Series) [Lab 7]
 - Cisco Cloud Services Router 1000v Series (CSR) [Lab 8]
-- Malicious IP [Lab 9]
+- Malicious IP [Lab 9 - *a fresh mailicious IP will be provided by the trainer*]
 
 ## 5. Lab Topology
 
@@ -73,5 +73,5 @@ Full-Blown MCNA
 ```{note}
 Throughout the labs, you will notice some additional pre-configured constructs, which will be utilised in the later labs. Please pay special attention to selecting the right region, gateway or VPC/VNet.
 
-In particular, resources in AWS us-east-1 will not be used until Lab 5. Likewise, resources in Azure US West Spoke 2 will not be used until Lab 7.
+In particular, resources in AWS us-east-1 will not be used until Lab 4. Likewise, resources in Azure US West Spoke 2 will not be used until Lab 6.
 ```
