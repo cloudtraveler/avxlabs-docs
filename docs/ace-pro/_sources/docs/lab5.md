@@ -43,7 +43,7 @@ align: center
 CoPilot view
 ```
 
-### 4.2. Transti-Spoke Attachment
+### 4.2. Transit-Spoke Attachment
 
 Go to **CoPilot > Cloud Fabric > Gateways > Spoke Gateways** and edit the Spoke Gateway **aws-us-east1-spoke1** clicking on the pencil icon:
 
@@ -108,7 +108,7 @@ Peering
 
 ### 4.4.1. Transit Peerings Verification
 
-Go to **CoPilot > Cloud Fabric > Gateways > Transit Gateways**, select the Transit Gatewasy **_aws-us-east1-transit_**, select the `"Gateway Routes"` tab and check the route **10.0.1.0/24** for instance.
+Go to **CoPilot > Cloud Fabric > Gateways > Transit Gateways**, select the Transit Gateway **_aws-us-east1-transit_**, select the `"Gateway Routes"` tab and check the route **10.0.1.0/24** for instance.
 
 ```{note}
 It may take a minute or two to reflect here.
